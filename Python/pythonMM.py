@@ -25,7 +25,7 @@ def multArray(m1,m2,n):
    return resultMatrix
 
 def main():
-   
+   #change this to increase or decrease matrix size
    matrixSize = 200
     
    X = generateMatrix(matrixSize)
@@ -36,7 +36,8 @@ def main():
    startTimer = time.perf_counter()
    finalProduct = multArray(X,Y,matrixSize)
    endTimer = time.perf_counter()
-   print(f"multiplied the matrices in { endTimer - startTimer:0.6f} seconds")
+   milliTime = (endTimer-startTimer)*1000
+   print(f"multiplied the matrices in { milliTime:0.2f} milli seconds")
    #for i in finalProduct:
      # print(i)
 
