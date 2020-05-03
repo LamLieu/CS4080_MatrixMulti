@@ -15,11 +15,11 @@ def generateMatrix(n):
 def multArray(m1,m2,n):
    col, row = n, n;
    resultMatrix = [[0 for x in range(col)] for y in range(row)] 
-   # iterate through rows of X
+   # iterate through rows of m1
    for i in range(len(m1)):
-      # iterate through columns of Y
+      # iterate through columns of m2
       for j in range(len(m2[0])):
-          # iterate through rows of Y
+          # iterate through rows of m2
           for k in range(len(m2)):
               resultMatrix[i][j] += m1[i][k] * m2[k][j]
    return resultMatrix
@@ -28,17 +28,21 @@ def main():
    #change this to increase or decrease matrix size
    matrixSize = 200
     
+   #matrix generation with numpy
    X = generateMatrix(matrixSize)
-   #print(X)
-  
    Y = generateMatrix(matrixSize)
-   #print(Y)
+
+   #starting the timer
    startTimer = time.perf_counter()
+   
+   #generation of the product
    finalProduct = multArray(X,Y,matrixSize)
+   
+   #end the timer
    endTimer = time.perf_counter()
+   
+   #turn seconds to milliseconds
    milliTime = (endTimer-startTimer)*1000
    print(f"multiplied the matrices in { milliTime:0.2f} milli seconds")
-   #for i in finalProduct:
-     # print(i)
-
+ 
 main()
