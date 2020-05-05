@@ -3,13 +3,14 @@
 #include <ctime>
 #include <windows.h>
 #include <psapi.h>
-#define size 1200
 
 using namespace std;
 
 struct Matrix {
-	int** arr = new int*[size]; 
+	int** arr = new int*[0]; 
 };
+
+int size = 200;
 
 void reference(struct Matrix &a, struct Matrix &b, struct Matrix &c) {
 	//Performs matrix multiplication for matrix A and B
@@ -37,20 +38,27 @@ int main() {
 
 	int choice = -1;
 	
-	cout << "0 for value, 1 for reference: ";
-	cin >> choice;
-	
 	struct Matrix a;
 	struct Matrix b;
 	struct Matrix c;
-	
-	for(int i = 0; i < size; i++) {
-		a.arr[i] = new int[size];
-		b.arr[i] = new int[size];
-		c.arr[i] = new int[size];
-	}
+
 	//Ensures the randomly generated values won't be repeated
 	srand(time(NULL));
+	cout << "0 for value, 1 for reference: ";
+	cin >> choice;
+
+	while(1) {
+		
+		a.arr = new int*[size];
+		b.arr = new int*[size];
+		c.arr = new int*[size];
+	
+		for(int i = 0; i < size; i++) {
+			a.arr[i] = new int[size];
+			b.arr[i] = new int[size];
+			c.arr[i] = new int[size];
+		}
+
 		
 		for (int i = 0; i < size; i++) {
 			for (int j = 0; j < size; j++) {
@@ -68,6 +76,7 @@ int main() {
 	else
 		cout << "error";
 	*/			
+
 		//Starts a timer to measure execution time
 		clock_t begin = clock();
 
@@ -85,6 +94,8 @@ int main() {
 		double timeTaken_ms = clockTicks / (CLOCKS_PER_SEC / 1000);
 		cout << "Starting " << (choice == 0 ? "value ":"reference ") << "Size : " << size << " execution Time: " << timeTaken_ms << " ms";
 		cout << endl;
+		
+		size += 200;
 	/*
 	myHandle = GetCurrentProcess();
 	if (GetProcessMemoryInfo(myHandle, &pmc, sizeof(pmc)))
@@ -92,5 +103,5 @@ int main() {
 	else
 		cout << "error";
     */
-
+	}
 }
