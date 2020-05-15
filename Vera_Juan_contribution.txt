@@ -1,7 +1,9 @@
 ****MAIN_CONTRIBUTIONS****
+
 Implementing automation and data logging in all three languages
 Formatted results from data and created charts/graphs as visual representations of data
 Analyzed graph results and set up assignment requirements (contributions.txt, data, presentation)
+
 
 *********COMMITS**********
 
