@@ -1,0 +1,16 @@
+Added Memory Usage and fixed passing methods - e46bfde1c60a41eaae00ba301e1f39ced3403ab8
+  This commit allowed the Java Code to log memory usage amongst each iteration of Matrix Multiplication
+  It also streamlined pseudo-value passing and reference passing methods to match with other 2 languages
+  
+Fixed passing by value - 5393fb4b7ab3e3b04f9fde5f0522f613f744941b
+  This commit implemented passing by value to a working state, which involved having to wrap arrays in a Matrix struct
+  It also streamlined passing methods to match with other 2 languages
+
+Added while loop - d2e9e35b8b127001ac3d2fedadad2cf6ac7ba123
+  Changed struct to dynamic arrays in order to increase array size due to array size being limited statically on the stack
+  As a result, automation was now possible as we could resize the arrays and loop through each iteration of Matrix Multiplication
+
+Added automation and made more similar to other 2 languages - db4a508f95fcb4dd1aa66002edd8e96b456f6505
+  Wrapped program in a while loop for automation
+  Printed out memory usage of each iteration
+  Streamlined passing methods to match with other 2 languages
