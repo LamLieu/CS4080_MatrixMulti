@@ -1,3 +1,10 @@
+****MAIN_CONTRIBUTIONS****
+Implementing automation and data logging in all three languages
+Formatted results from data and created charts/graphs as visual representations of data
+Analyzed graph results and set up assignment requirements (contributions.txt, data, presentation)
+
+*********COMMITS**********
+
 Added Memory Usage and fixed passing methods - e46bfde1c60a41eaae00ba301e1f39ced3403ab8
   This commit allowed the Java Code to log memory usage amongst each iteration of Matrix Multiplication
   It also streamlined pseudo-value passing and reference passing methods to match with other 2 languages
