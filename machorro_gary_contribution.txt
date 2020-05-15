@@ -1,0 +1,16 @@
+Gary Machorro
+CS 4080
+May 7, 2020
+Contributions
+	In this group project, I was tasked with writing the program used in testing in Python. 
+Lam Lieu finished his Java code first, so I decided to make my code similar to his in the way that it was structured. 
+We all decided that using matrix multiplication was going to be the way to go in this experiment as we would have to pass arrays and access their contents frequently. 
+What I did to help the team, was creating a text document that compiled the information for passing parameters from the book and from the internet as well as breaking it down to language specific features. 
+I also started the powerpoint for the proposal, and wrote several parts of the paper. 
+I wrote the abstract, intro, a large portion of the methods, as well as the future work and the conclusion. 
+
+On github i have 4 commits
+creating the file
+writing the program
+fixing the time unit to milliseconds
+adding additional comments
